@@ -14,9 +14,9 @@
     >
         
         <div class="item">
-            Name: <span>  </span>
+            Name: <span> {{ showName }} </span>
             <br/>
-            Age: <span>  </span>
+            Age: <span> {{ showAge}} </span>
         </div>
     </md-drawer>
 </div>
@@ -26,12 +26,16 @@
 
 
 <script>
+    import {mapGetters} from 'vuex'
     export default {
         data(){
             return {
                 showNavigation:false
             }
-        }
+        },
+        computed: {
+            ...mapGetters(['showName','showAge'])
+        },
     }
 
 </script>

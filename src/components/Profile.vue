@@ -1,11 +1,24 @@
 <template>
     <div>
         <div class="item">
-            Name: <span>  </span>
+            Name: <span> {{ name }} </span>
             <br/>
-            Age: <span>  </span>
+            Age: <span> {{ age }}  </span>
            
         </div>
     </div>
 </template>
+<script>
+    export  default {
+        computed: {
+            name() {
+                return this.$store.getters.showName
+
+            },
+            age(){
+                return this.$store.getters.showAge
+            }
+        },
+    }
+</script>
 

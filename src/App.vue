@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import compProfile from './components/Profile'; 
+import compProfile from './components/Profile';
 import compDrawer from './components/Drawer';
 import compName from './components/Name';
 import compAge from './components/Age';
