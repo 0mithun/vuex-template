@@ -1,28 +1,70 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="container">
+      <div>
+        <comp-drawer/>
+        <hr>
+        <comp-profile/>
+        <hr>
+        <comp-name/>
+        <hr>
+        <comp-age/>
+      </div>
+      
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import compProfile from './components/Profile'; 
+import compDrawer from './components/Drawer';
+import compName from './components/Name';
+import compAge from './components/Age';
+
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    components:{
+      compProfile,
+      compDrawer,
+      compName,
+      compAge
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.item {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 20px;
+}
+
+.item span {
+  font-weight: 700;
+}
+
+input {
+  font-size: 20px
+}
+
+.content {
+  padding:20px 0px
+}
+
 </style>
